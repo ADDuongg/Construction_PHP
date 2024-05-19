@@ -33,10 +33,10 @@
                         </div>
                         <div id="materialsList" class="w-100 hidden">
                             <ul class="w-100 p-0 d-flex flex-column align-items-start m-0 ">
-                                <a href="/contractPayment" class="navitem ps-5"><i class="fa-solid fa-up-right-and-down-left-from-center me-3"></i>Thanh lý hợp đồng</a>
+                                <a href="../page/contractPayment.php" class="navitem ps-5"><i class="fa-solid fa-up-right-and-down-left-from-center me-3"></i>Thanh lý hợp đồng</a>
                                 <a href="/statePayment" class="navitem ps-5"><i class="fa-solid fa-house me-3"></i>Thanh toán theo đợt</a>
                                 <a href="page/contract.php" class="navitem ps-5"><i class="fa-solid fa-file-signature me-3"></i>Quản lý hợp đồng</a>
-                                <a href="/extendContract" class="navitem ps-5"><i class="fa-solid fa-up-right-and-down-left-from-center me-3"></i>Gia hạn hợp đồng</a>
+                                <a href="../page/extendContract.php" class="navitem ps-5"><i class="fa-solid fa-up-right-and-down-left-from-center me-3"></i>Gia hạn hợp đồng</a>
                             </ul>
                         </div>
                         <div onclick="toggleList('project')" class="navitem d-flex justify-content-between align-items-center">
@@ -45,7 +45,7 @@
                         </div>
                         <div id="project" class="hidden">
                             <ul style="list-style: none;" class="w-100 p-0 d-flex flex-column align-items-start m-0">
-                                <a href="/extendProject" class="navitem ps-5"><i class="fa-solid fa-up-right-and-down-left-from-center me-3"></i>Gia hạn dự án</a>
+                                <a href="../page/extendProject.php" class="navitem ps-5"><i class="fa-solid fa-up-right-and-down-left-from-center me-3"></i>Gia hạn dự án</a>
                                 <a href="/project" class="navitem ps-5"><i class="fa-solid fa-house me-3"></i>Quản lý dự án</a>
                                 <a href="/attendance" class="navitem ps-5"><i class="fa-solid fa-clipboard-user me-3"></i>Quản lý điểm danh</a>
                                 <a href="/stateProject" class="navitem ps-5"><i class="fa-solid fa-arrow-trend-up me-3"></i>Giai đoạn dự án</a>
@@ -64,12 +64,12 @@
                         </div>
                         <a href="/importMatterials" class="navitem mt-3"><i class="fa-solid fa-truck-droplet me-3"></i>Nhập vật liệu</a>
                         <a href="/hireMachine" class="navitem"><i class="fa-solid fa-truck-front me-3"></i>Thuê máy móc</a>
-                        <a href="/buildingPermit" class="navitem"><i class="fa-solid fa-file-circle-check me-3"></i>Giấy phép xây dựng</a>
-                        <a href="/customers" class="navitem"><i class="fa-solid fa-user me-3"></i>Quản lý khách hàng</a>
-                        <a href="/contractors" class="navitem"><i class="fa-solid fa-users me-3"></i>Quản lý nhà thầu</a>
+                        <a href="../page/buildingPermit.php" class="navitem"><i class="fa-solid fa-file-circle-check me-3"></i>Giấy phép xây dựng</a>
+                        <a href="../page/customer.php" class="navitem"><i class="fa-solid fa-user me-3"></i>Quản lý khách hàng</a>
+                        <a href="../page/contractor.php" class="navitem"><i class="fa-solid fa-users me-3"></i>Quản lý nhà thầu</a>
                         <a href="/statistics" class="navitem"><i class="fa-solid fa-chart-simple me-3"></i>Thống kê ngày</a>
                         <a href="/assignment" class="navitem"><i class="fa-solid fa-braille me-3"></i>Phân công dự án</a>
-                        <a href="/staff" class="navitem"><i class="fa-solid fa-user-gear me-3"></i>Quản lý nhân viên</a>
+                        <a href="../page/staff.php" class="navitem"><i class="fa-solid fa-user-gear me-3"></i>Quản lý nhân viên</a>
                     </div>
                 </div>
             </div>
