@@ -7,7 +7,7 @@
                 <!-- Modal Header -->
                 <div class="modal-header">
                     <div class='d-flex'>
-                        <h3>Thêm hợp đồng xây dựng</h3>
+                        <h3>Thêm hợp đồng xây dựng111</h3>
                         <h3 class='text-danger'>*</h3>
                     </div>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -18,7 +18,7 @@
                         <input type="hidden" name="action" value="add" class='form-control'  />
                     </div>
                     <div class="mb-3">
-                        <label for="tenhopdong" class='form-label'>Tên hợp đồng</label>
+                        <label for="tenhopdong" class='form-label'>Tên hợp đồng111</label>
                         <input type="text" name="tenhopdong" class='form-control' placeholder='Nhập tên hợp đồng...' />
                     </div>
                     <div class="mb-3">

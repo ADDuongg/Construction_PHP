@@ -69,7 +69,7 @@
                             <a href="/hireMachine" class="navitem"><i class="fa-solid fa-truck-front me-3"></i>Thuê máy móc</a>
                             <a href="./page/buildingPermit.php" class="navitem"><i class="fa-solid fa-file-circle-check me-3"></i>Giấy phép xây dựng</a>
                             <a href="./page/customer.php" class="navitem"><i class="fa-solid fa-user me-3"></i>Quản lý khách hàng</a>
-                            <a href="./contractor.php" class="navitem"><i class="fa-solid fa-users me-3"></i>Quản lý nhà thầu</a>
+                            <a href="./page/contractor.php" class="navitem"><i class="fa-solid fa-users me-3"></i>Quản lý nhà thầu</a>
                             <a href="/statistics" class="navitem"><i class="fa-solid fa-chart-simple me-3"></i>Thống kê ngày</a>
                             <a href="/assignment" class="navitem"><i class="fa-solid fa-braille me-3"></i>Phân công dự án</a>
                             <a href=".page/staff.php" class="navitem"><i class="fa-solid fa-user-gear me-3"></i>Quản lý nhân viên</a>

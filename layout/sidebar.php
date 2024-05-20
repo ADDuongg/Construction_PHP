@@ -35,7 +35,7 @@
                             <ul class="w-100 p-0 d-flex flex-column align-items-start m-0 ">
                                 <a href="../page/contractPayment.php" class="navitem ps-5"><i class="fa-solid fa-up-right-and-down-left-from-center me-3"></i>Thanh lý hợp đồng</a>
                                 <a href="/statePayment" class="navitem ps-5"><i class="fa-solid fa-house me-3"></i>Thanh toán theo đợt</a>
-                                <a href="page/contract.php" class="navitem ps-5"><i class="fa-solid fa-file-signature me-3"></i>Quản lý hợp đồng</a>
+                                <a href="../page/contract.php" class="navitem ps-5"><i class="fa-solid fa-file-signature me-3"></i>Quản lý hợp đồng</a>
                                 <a href="../page/extendContract.php" class="navitem ps-5"><i class="fa-solid fa-up-right-and-down-left-from-center me-3"></i>Gia hạn hợp đồng</a>
                             </ul>
                         </div>

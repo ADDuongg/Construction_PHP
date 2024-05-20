@@ -1,6 +1,6 @@
 <?php  ?>
 
-<div class="modal fade" id="modalAddContract">
+<div class="modal fade" id="modalUpdateContract<?php echo $row['hopdong_id']; ?>">
     <div class="modal-dialog modal-lg">
         <div class="modal-content" style="overflow: hidden; overflow-x: auto;">
             <div style="min-width: 70vh; height: 100%;">
@@ -13,7 +13,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <!-- Modal Body -->
-                <form method="POST" action="/version_PHP/controller/contractController.php" class="modal-body py-2 px-4">
+                <form method="POST" action="/version_PHP/controller/contractController.php" class="modal-body py-2 px-4 h-100 w-100">
                     <div class="mb-3">
                         <label for="tenhopdong" class='form-label'>Tên hợp đồng</label>
                         <input type="text" name="tenhopdong" class='form-control' placeholder='Nhập tên hợp đồng...'  />
