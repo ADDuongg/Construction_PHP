@@ -1,3 +1,57 @@
+<?php
+
+include '../database.php';
+$select = "SELECT * FROM nhathau";
+$result = $conn->query($select);
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['action'] === 'add') {
+    $tennhathau = $_POST['tennhathau'];
+    $email = $_POST['email'];
+    $sdt = $_POST['sdt'];
+    $diachi = $_POST['diachi'];
+    $loaihinhhoatdong = $_POST['loaihinhhoatdong'];
+
+    $sql = "INSERT INTO nhathau (tennhathau, email, sdt, diachi, loaihinhhoatdong) VALUES ('$tennhathau', '$email', '$sdt', '$diachi', '$loaihinhhoatdong')";
+
+    if ($conn->query($sql) === TRUE) {
+        header("Location: contractor.php");
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+}
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if ($_POST['action'] == 'update') {
+        $nhathau_id = $_POST['nhathau_id'];
+        $tennhathau = $_POST['tennhathau'];
+        $email = $_POST['email'];
+        $sdt = $_POST['sdt'];
+        $diachi = $_POST['diachi'];
+        $loaihinhhoatdong = $_POST['loaihinhhoatdong'];
+
+        $sql = "UPDATE nhathau SET tennhathau='$tennhathau', email='$email', sdt='$sdt', diachi='$diachi', loaihinhhoatdong='$loaihinhhoatdong' WHERE nhathau_id='$nhathau_id'";
+
+        if ($conn->query($sql) === TRUE) {
+            header("Location: contractor.php");
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+    }
+}
+if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['action'] === 'delete') {
+    $nhathau_id = $_POST['nhathau_id'];
+
+    $sql = "DELETE FROM nhathau WHERE nhathau_id='$nhathau_id'";
+
+    if ($conn->query($sql) === TRUE) {
+        header("Location: contractor.php");
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,7 +104,7 @@
                                 <input type="text" class="form-control" name="loaihinhhoatdong" placeholder="Nhập loại hình hoạt động..." />
                             </div>
                         </div>
-                    
+
                         <div class="col-12">
                             <div class="col d-flex justify-content-end">
                                 <div class="me-3">
@@ -91,36 +145,49 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Nhà thầu A</td>
-                                    <td>123 Đường ABC</td>
-                                    <td>0123456789</td>
-                                    <td>emaila@example.com</td>
-                                    <td>Loại hình A</td>
-                                    <td>
-                                        <button class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#modalUpdateContractor">
-                                            <i class="fa-solid fa-pen-to-square"></i>
-                                        </button>
-                                        <button class="btn btn-danger">
-                                            <i class="fa-solid fa-trash"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <?php include '../modal/contractor/modalUpdate.php' ?>
+                                <?php
+                                while ($row = $result->fetch_assoc()) {
+                                ?>
+
+                                    <tr>
+                                        <td><?php echo $row['nhathau_id'] ?></td>
+                                        <td><?php echo $row['tennhathau'] ?></td>
+                                        <td><?php echo $row['diachi'] ?></td>
+                                        <td><?php echo $row['sdt'] ?></td>
+                                        <td><?php echo $row['email'] ?></td>
+                                        <td><?php echo $row['loaihinhhoatdong'] ?></td>
+                                        <td>
+                                            <button class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#modalUpdateContractor<?php echo $row['nhathau_id'] ?>">
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                            </button>
+                                            <form action="" method="POST" style="display:inline;">
+                                                <input type="hidden" name="nhathau_id" value="<?php echo $row['nhathau_id'] ?>">
+                                                <input type="hidden" name="action" value="delete">
+                                                <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this contractor?');">
+                                                    <i class="fa-solid fa-trash"></i>
+                                                </button>
+                                            </form>
+                                        </td>
+                                    </tr>
+
+                                    <?php include '../modal/contractor/modalUpdate.php' ?>
+                                <?php
+                                }
+
+                                ?>
                             </tbody>
                         </table>
                         <!-- Pagination and Modals will go here -->
                     </div>
                 </div>
             </section>
-                <?php include '../modal/contractor/modalAdd.php' ?>
+            <?php include '../modal/contractor/modalAdd.php' ?>
         </div>
     </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-     <script src="../js/index.js"></script>
+    <script src="../js/index.js"></script>
     <script>
         function handlePrevent(event) {
             event.preventDefault();

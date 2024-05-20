@@ -11,7 +11,11 @@
                     </div>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body p-4">
+                <form action="" method="POST" class="modal-body p-4">
+                    <div class="mb-3">
+                        
+                        <input type="hidden" name="action" value="add" class="form-control" placeholder="Nhập họ tên..." />
+                    </div>
                     <div class="mb-3">
                         <label for="tennhathau" class="form-label">Tên nhà thầu</label>
                         <input type="text" name="tennhathau" class="form-control" placeholder="Nhập họ tên..." />
@@ -32,11 +36,11 @@
                         <label for="loaihinhhoatdong" class="form-label">Loại hình hoạt động</label>
                         <input type="text" name="loaihinhhoatdong" class="form-control" />
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                    <button type="button" class="btn btn-primary">Thêm</button>
-                </div>
+                    <div class="modal-footer">
+                        <button onclick="handlePrevent()" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                        <button type="submit" class="btn btn-primary">Thêm</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
