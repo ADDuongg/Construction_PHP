@@ -193,8 +193,7 @@ $next_page = ($page == $total_page) ? 1 : $page + 1;
                             </tbody>
 
                         </table>
-                        <!-- ModalAddContract and ModalUpdateContract modals -->
-                        <!-- Paginate component -->
+                        
                         <?php
                         include '../component/paginate.php';
                         generatePagination($start_from, 10, $totalRow, $total_page, $next_page, $prev_page, $page, $limit);
